@@ -40,3 +40,7 @@ gem 'spring',        group: :development
 gem "responders"
 gem "react-rails"
 gem "react-router-rails"
+
+group :development, :test do
+  gem 'rspec-rails'
+end

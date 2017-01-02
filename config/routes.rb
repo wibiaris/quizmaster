@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   root to: 'site#index'
+
+  get '/quiz', to:'site#quiz'
+
   namespace :api do
     namespace :v1 do
       resources :questions, only: [:index, :create, :destroy, :update]

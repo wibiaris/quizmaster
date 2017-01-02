@@ -26,9 +26,9 @@ var Quiz = React.createClass({
 		var quiz = this.state.quiz.map((quiz) => {
 			var content = quiz.content;
 			return (
-				<div className='row'>
+				<div className='row' key={quiz.id}>
 				<div className='col-sm-6'>
-				        <div className="panel panel-primary" key={quiz.id} >
+				        <div className="panel panel-primary">
 				            <div className="panel-heading">
 				              <h3 className="panel-title">Quiz</h3>
 				            </div>

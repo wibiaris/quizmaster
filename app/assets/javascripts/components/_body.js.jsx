@@ -52,6 +52,7 @@ var Body = React.createClass({
 				<div>
 					<NewQuestion handleSubmit={this.handleSubmit}/>
 					<AllQuestions questions={this.state.questions} handleDelete={this.handleDelete} onUpdate={this.handleUpdate}/>
+					<Quiz/>
 				</div>
 
 			)

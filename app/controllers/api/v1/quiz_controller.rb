@@ -1,10 +1,10 @@
 class Api::V1::QuizController < Api::V1::BaseController
 	def index
-		respond_with Questions.select("id, content").order("RANDOM()").limit(1)
+		respond_with Questions.select("id, content, answer").order("RANDOM()").limit(1)
 	end
 	
 	def update
-		@answer = checkanswer(Questions.find(params[:id]), params[:answer])
+		@answer = check_anwer(Questions.find(params[:id]), params[:answer])
 		respond_with @answer, json: @answer
 	end
 
@@ -14,7 +14,7 @@ class Api::V1::QuizController < Api::V1::BaseController
 		end	
 
 		def check_anwer(question, answer)
-			{:correct => replace_numbers(question[:answer]) == replace_number(answer)}
+			{:correct => replace_number(question[:answer]) == replace_number(answer)}
 		end
 
 		def replace_number(str)

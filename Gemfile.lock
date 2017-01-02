@@ -86,6 +86,9 @@ GEM
       execjs
       railties (>= 3.2)
       tilt
+    react-router-rails (0.13.3.1)
+      rails (>= 3.1)
+      react-rails (>= 0.12)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
     sass (3.2.19)
@@ -128,6 +131,7 @@ DEPENDENCIES
   jquery-rails
   rails (= 4.1.8)
   react-rails
+  react-router-rails
   responders
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

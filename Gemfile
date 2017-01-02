@@ -39,3 +39,4 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 gem "responders"
 gem "react-rails"
+gem "react-router-rails"

@@ -39,6 +39,8 @@ var NewQuestion = React.createClass({
 					            		<button type="button" onClick={this.handleClick} className="btn btn-sm btn-primary">Submit</button>
 					            	</div>	
 								</div>
+
+								
 				            </div>
 				         </div>		
 				</div>		

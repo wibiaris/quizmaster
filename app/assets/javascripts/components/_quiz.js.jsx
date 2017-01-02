@@ -22,17 +22,38 @@ var Quiz = React.createClass({
 			 }
 		});
 	},
-
 	render() {
 		var quiz = this.state.quiz.map((quiz) => {
 			var content = quiz.content;
 			return (
-				<div key={quiz.id}>
-					{content}
-					<input ref='quiz_id' type="hidden" value={quiz.id}/>
-					<input ref='answer' placeholder='Enter a answer'/>
-					<button onClick={this.handleClick}> Submit </button>
-				</div>
+				<div className='row'>
+				<div className='col-sm-6'>
+				        <div className="panel panel-primary" key={quiz.id} >
+				            <div className="panel-heading">
+				              <h3 className="panel-title">Quiz</h3>
+				            </div>
+				            <div className="panel-body">
+				            	<div className="form-group row">
+					            	<div className="col-xs-9">
+					            		 <h3> {content} ? </h3>
+										 <input className="form-control" ref='quiz_id' type="hidden" value={quiz.id}/>
+					            	</div>
+				            	</div>
+				            	<div className="form-group row">
+					            	<div className="col-xs-9">
+					            		<input className="form-control" ref='answer' placeholder='Enter a answer'/>
+					            	</div>
+				            	</div>
+				            	<div className="form-group row">
+					            	<div className="col-xs-9">
+					            		<button type="button" onClick={this.handleClick} className="btn btn-sm btn-primary">Submit</button>
+					            	</div>	
+								</div>	
+				            </div>
+				         </div>		
+				</div>		
+			</div>
+
 			)
 		});
 

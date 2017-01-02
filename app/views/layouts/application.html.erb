@@ -8,7 +8,25 @@
 </head>
 <body>
 
-<%= yield %>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Quiz Master</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Quiz</a></li>
+            <li><a href="#about">Admin Questions</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+</br>
+</br>
+</br>
 
+<div class="container theme-showcase" role="main">
+<%= yield %>
+</div>
 </body>
 </html>

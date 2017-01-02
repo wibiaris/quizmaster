@@ -1,6 +1,8 @@
 class Api::V1::QuizController < Api::V1::BaseController
 	def index
-		respond_with Questions.select("id, content, answer").order("RANDOM()").limit(1)
+		@question = Questions.select("id, content, answer").order("RANDOM()").limit(1)
+
+		respond_with @question
 	end
 	
 	def update

@@ -20,13 +20,21 @@ var Question = React.createClass({
 		var content = this.state.editable ? <input type='text' ref='content' defaultValue={this.props.question.content} /> : <h3> {this.props.question.content} </h3>
 		var answer = this.state.editable ? <input type='text' ref='answer' defaultValue={this.props.question.answer} /> : <p> {this.props.question.answer} </p>
 		return (
-			<div>
-				{content}
-				{answer}
-				<button onClick={this.props.handleDelete}> Delete </button>
-				<button onClick={this.handleEdit}> { this.state.editable ? 'Submit' : 'Edit'}  </button>
+			<div className='row'>
+				<div className='col-sm-4'>
+				        <div className="panel panel-primary">
+				            <div className="panel-heading">
+				              <h3 className="panel-title">Question</h3>
+				            </div>
+				            <div className="panel-body">
+				              		{content}
+									{answer}
+									<button onClick={this.props.handleDelete}> Delete </button>
+									<button onClick={this.handleEdit}> { this.state.editable ? 'Submit' : 'Edit'}  </button>
+				            </div>
+				         </div>		
+				</div>		
 			</div>
-
 		)
 	}
 })

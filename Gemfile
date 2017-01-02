@@ -40,6 +40,8 @@ gem 'spring',        group: :development
 gem "responders"
 gem "react-rails"
 gem "react-router-rails"
+gem 'bootstrap-sass'
+	gem 'autoprefixer-rails'
 
 group :development, :test do
   gem 'rspec-rails'

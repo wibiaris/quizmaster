@@ -14,10 +14,34 @@ var NewQuestion = React.createClass({
 
 	render() {
 		return (
-			<div>
-				<input ref='content' placeholder='Enter content of the question' />
-				<input ref='answer' placeholder='Enter a answer'/>
-				<button onClick={this.handleClick}> Submit </button>
+			<div className='row'>
+				<div className='col-sm-6'>
+				        <div className="panel panel-primary">
+				            <div className="panel-heading">
+				              <h3 className="panel-title">Input Question</h3>
+				            </div>
+				            <div className="panel-body">
+
+				            	<div className="form-group row">
+					            	<div className="col-xs-9">
+					            		 <input className="form-control" ref='content' placeholder='Enter content of the question' />
+					            	</div>
+				            	</div>
+
+				            	<div className="form-group row">
+					            	<div className="col-xs-9">
+					            		<input className="form-control" ref='answer' placeholder='Enter a answer'/>
+					            	</div>
+				            	</div>
+
+				            	<div className="form-group row">
+					            	<div className="col-xs-9">
+					            		<button type="button" onClick={this.handleClick} className="btn btn-sm btn-primary">Submit</button>
+					            	</div>	
+								</div>
+				            </div>
+				         </div>		
+				</div>		
 			</div>
 		)
 	}

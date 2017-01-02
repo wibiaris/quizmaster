@@ -49,10 +49,10 @@ var Body = React.createClass({
 
 	render() {
 			return (
-				<div>
-					<NewQuestion handleSubmit={this.handleSubmit}/>
-					<AllQuestions questions={this.state.questions} handleDelete={this.handleDelete} onUpdate={this.handleUpdate}/>
-					<Quiz/>
+				<div className="container">
+					<div id="content"> <NewQuestion handleSubmit={this.handleSubmit}/> </div>
+					<div id="content"> <AllQuestions questions={this.state.questions} handleDelete={this.handleDelete} onUpdate={this.handleUpdate}/></div>
+					<div id="content"><Quiz/></div>
 				</div>
 
 			)
